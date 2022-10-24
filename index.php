@@ -44,31 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-<?php
 
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
- 
-    ?>
-    <tr>
-     
-   <td><?=$row["city_ID"]?></td>
-    <td><?=$row["Abbreviation"]?></td>
-    <td><a href="cities.php?id=<?=$row["city_ID"]?>"><?=$row["fullname"]?></a></td>
-    </tr>
-
-    
- 
-<?php
-  }
-} else {
-  echo "0 results";
-}
-   
-  ?> 
-   </tbody>
-</table>
 
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addInstructor">
         Add New
