@@ -19,7 +19,31 @@ $result = $conn->query($sql);
 
 
 ?>
-          
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  switch ($_POST['saveType']) {
+    case 'Add':
+        $sqlAdd = "insert into City (Abbreviation, fullname) value (?, ?)";
+        $stmtAdd = $conn->prepare($sqlAdd);
+        $stmtAdd->bind_param("ss", $_POST['icityabrv'], $_POST['icityname']);
+        $stmtAdd->execute();   
+      echo '<div class="alert alert-success" role="alert">New City added.</div>';
+      break;
+
+      case 'Delete':
+        $sqlDelete = "Delete From City where InstructorID=?";
+        $stmtDelete = $conn->prepare($sqlDelete);
+        $stmtDelete->bind_param("i", $_POST['iid']);
+        $stmtDelete->execute();
+      echo '<div class="alert alert-success" role="alert">City deleted.</div>';
+
+   }
+}
+     
+?>
+
+
 <?php
 
 if ($result->num_rows > 0) {
@@ -33,6 +57,15 @@ if ($result->num_rows > 0) {
     <td><?=$row["Abbreviation"]?></td>
     <td><a href="cities.php?id=<?=$row["city_ID"]?>"><?=$row["fullname"]?></a></td>
     </tr>
+
+    <td>
+              <form method="post" action="">
+                <input type="hidden" name="iid" value="<?=$row["city_ID"]?>" />
+                <input type="hidden" name="saveType" value="Delete">
+                <button type="submit" class="btn" onclick="return confirm('Are you sure?')"> Delete </button>
+              </form>
+            </td>
+          </tr>
  
 <?php
   }
