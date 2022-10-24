@@ -37,6 +37,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmtDelete->bind_param("i", $_POST['iid']);
         $stmtDelete->execute();
       echo '<div class="alert alert-success" role="alert">City deleted.</div>';
+     
+      
+      case 'Edit':
+      $sqlEdit = "update City set Abbreviation=?, fullname=? where city_ID=?";
+      $stmtEdit = $conn->prepare($sqlEdit);
+      $stmtEdit->bind_param("ssi", $_POST['iFirstName'], $_POST['iLastName'], $_POST['iid']);
+      $stmtEdit->execute();
+      echo '<div class="alert alert-success" role="alert">Instructor edited.</div>';
+      break;
+
 
    }
 }
