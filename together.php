@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["City.city_ID"]?></td>
+    <td><?=$row["city_ID"]?></td>
     <td><?=$row["Abbreviation"]?></td>
    <td><?=$row["fullname"]?></td>
     <td><?=$row["Baseball_name"]?></td>
