@@ -58,14 +58,7 @@ if ($result->num_rows > 0) {
     <td><a href="cities.php?id=<?=$row["city_ID"]?>"><?=$row["fullname"]?></a></td>
     </tr>
 
-    <td>
-              <form method="post" action="">
-                <input type="hidden" name="iid" value="<?=$row["city_ID"]?>" />
-                <input type="hidden" name="saveType" value="Delete">
-                <button type="submit" class="btn" onclick="return confirm('Are you sure?')"> Delete </button>
-              </form>
-            </td>
-          </tr>
+    
  
 <?php
   }
