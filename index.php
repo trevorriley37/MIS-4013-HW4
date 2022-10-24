@@ -89,7 +89,7 @@ if ($result->num_rows > 0) {
             <td><?=$row["Abbreviation"]?></td>
             <td><?=$row["fullname"]?></td>
             <td>
-              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editInstructor<?=$row["InstructorID"]?>">
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editcity<?=$row["city_ID"]?>">
                 Edit
               </button>
               <div class="modal fade" id="editInstructor<?=$row["InstructorID"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editInstructor<?=$row["city_ID"]?>Label" aria-hidden="true">
