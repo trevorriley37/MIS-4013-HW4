@@ -105,11 +105,11 @@ if ($result->num_rows > 0) {
 
 while($row = $result->fetch_assoc()) {
 
-<tr>
+          <tr>
 
-<td>
+             <td>
               <form method="post" action="">
-                <input type="hidden" name="iid" value="<?=$row["InstructorID"]?>" />
+                <input type="hidden" name="iid" value="<?=$row["city_ID"]?>" />
                 <input type="hidden" name="saveType" value="Delete">
                 <button type="submit" class="btn" onclick="return confirm('Are you sure?')"> Delete </button>
               </form>
