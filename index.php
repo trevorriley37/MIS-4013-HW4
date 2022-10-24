@@ -29,7 +29,7 @@ $result = $conn->query($sql);
       </button>
 
       <!-- Modal -->
-      <div class="modal fade" id="addCourse" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addCourseLabel" aria-hidden="true">
+      <div class="modal fade" id="addcity" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addCourseLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -83,8 +83,6 @@ if ($result->num_rows > 0) {
 </table>
 
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddCity">
-        Add New
-      </button>
+
 
 </html>
