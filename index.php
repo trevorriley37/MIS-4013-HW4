@@ -37,6 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmtDelete->bind_param("i", $_POST['iid']);
         $stmtDelete->execute();
       echo '<div class="alert alert-success" role="alert">City deleted.</div>';
+      break;
      
       
       case 'Edit':
