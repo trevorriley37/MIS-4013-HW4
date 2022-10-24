@@ -86,7 +86,8 @@ if ($result->num_rows > 0) {
           
           <tr>
             <td><?=$row["city_ID"]?></td>
-            <td><?=$row["Abbreviation"]." "?><?=$row["fullname"]?></a></td>
+            <td><?=$row["Abbreviation"].?></td>
+            <td><?=$row["fullname"]?></td>
             <td>
               <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editInstructor<?=$row["InstructorID"]?>">
                 Edit
