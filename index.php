@@ -101,5 +101,22 @@ if ($result->num_rows > 0) {
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
+<?php
+
+while($row = $result->fetch_assoc()) {
+
+<tr>
+
+<td>
+              <form method="post" action="">
+                <input type="hidden" name="iid" value="<?=$row["InstructorID"]?>" />
+                <input type="hidden" name="saveType" value="Delete">
+                <button type="submit" class="btn" onclick="return confirm('Are you sure?')"> Delete </button>
+              </form>
+            </td>
+          </tr>
+ }
+}
+
 
 </html>
