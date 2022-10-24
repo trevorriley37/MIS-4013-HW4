@@ -19,6 +19,58 @@ $result = $conn->query($sql);
 
 
 
+?>
+      <h1>Courses</h1>
+      <table class="table table-striped">
+          
+          <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCourse">
+        Add New
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="addCourse" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addCourseLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="addCourseLabel">Add Course</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="">
+                <div class="mb-3">
+                  <label for="editCourse<?=$row["CourseID"]?>Name" class="form-label">InstructorID</label>
+                          <input type="text" class="form-control" id="editCourse<?=$row["CourseID"]?>Name" aria-describedby="editCourse<?=$row["CourseID"]?>Help" name="cInsID">
+                          <label for="editCourse<?=$row["CourseID"]?>Name" class="form-label">Course</label>
+                          <input type="text" class="form-control" id="editCourse<?=$row["CourseID"]?>Name" aria-describedby="editCourse<?=$row["CourseID"]?>Help" name="cCourse">
+                          <label for="editCourse<?=$row["CourseID"]?>Name" class="form-label">Section</label>
+                          <input type="text" class="form-control" id="editCourse<?=$row["CourseID"]?>Name" aria-describedby="editCourse<?=$row["CourseID"]?>Help" name="cSection">
+                          <div id="editCourse<?=$row["CourseID"]?>Help" class="form-text">Enter the Course information.</div>
+                        </div>
+                <input type="hidden" name="saveType" value="Add">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  
+          
+        <thead>
+          <tr>
+            <th>CourseID</th>
+            <th>InstructorID</th>
+            <th>Course</th>
+            <th>Section</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          
+<?php
 
 if ($result->num_rows > 0) {
   // output data of each row
@@ -41,4 +93,10 @@ if ($result->num_rows > 0) {
   ?> 
    </tbody>
 </table>
+
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddCity">
+        Add New
+      </button>
+
 </html>
