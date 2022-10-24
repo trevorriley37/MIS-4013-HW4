@@ -113,10 +113,10 @@ if ($result->num_rows > 0) {
                       <form method="post" action="">
                         <div class="mb-3">
                           <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">First Name</label>
-                          <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="iFirstName" value="<?=$row['FirstName']?>">
+                          <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="iFirstName" value="<?=$row['Abbreviation']?>">
                           <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">Last Name</label>
-                          <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="iLastName" value="<?=$row['LastName']?>">
-                          <div id="editcity<?=$row["city_ID"]?>Help" class="form-text">Enter the instructor's name.</div>
+                          <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="iLastName" value="<?=$row['fullname']?>">
+                          <div id="editcity<?=$row["city_ID"]?>Help" class="form-text">Enter the cities Full name/Abbreviation.</div>
                         </div>
                         <input type="hidden" name="iid" value="<?=$row['city_ID']?>">
                         <input type="hidden" name="saveType" value="Edit">
