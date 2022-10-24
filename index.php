@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $stmtEdit = $conn->prepare($sqlEdit);
       $stmtEdit->bind_param("ssi", $_POST['iFirstName'], $_POST['iLastName'], $_POST['iid']);
       $stmtEdit->execute();
-      echo '<div class="alert alert-success" role="alert">Instructor edited.</div>';
+      echo '<div class="alert alert-success" role="alert">City edited.</div>';
       break;
 
 
