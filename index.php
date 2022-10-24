@@ -71,11 +71,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="editInstructor<?=$row["InstructorID"]?>Name" class="form-label">City Abbreviation</label>
-                          <input type="text" class="form-control" id="editInstructor<?=$row["InstructorID"]?>Name" aria-describedby="editInstructor<?=$row["InstructorID"]?>Help" name="icityabrv">
-                          <label for="editInstructor<?=$row["InstructorID"]?>Name" class="form-label">City Full Name</label>
-                          <input type="text" class="form-control" id="editInstructor<?=$row["InstructorID"]?>Name" aria-describedby="editInstructor<?=$row["InstructorID"]?>Help" name="icityname">
-                          <div id="editInstructor<?=$row["InstructorID"]?>Help" class="form-text">Enter the cities info.</div>
+                  <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">City Abbreviation</label>
+                          <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="icityabrv">
+                          <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">City Full Name</label>
+                          <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="icityname">
+                          <div id="editcity<?=$row["city_ID"]?>Help" class="form-text">Enter the cities info.</div>
                         </div>
                 <input type="hidden" name="saveType" value="Add">
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -102,23 +102,23 @@ if ($result->num_rows > 0) {
               <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editcity<?=$row["city_ID"]?>">
                 Edit
               </button>
-              <div class="modal fade" id="editInstructor<?=$row["city_ID"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editInstructor<?=$row["city_ID"]?>Label" aria-hidden="true">
+              <div class="modal fade" id="editcity<?=$row["city_ID"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editcity<?=$row["city_ID"]?>Label" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="editInstructor<?=$row["city_ID"]?>Label">Edit City</h1>
+                      <h1 class="modal-title fs-5" id="editcity<?=$row["city_ID"]?>Label">Edit City</h1>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <form method="post" action="">
                         <div class="mb-3">
-                          <label for="editInstructor<?=$row["InstructorID"]?>Name" class="form-label">First Name</label>
-                          <input type="text" class="form-control" id="editInstructor<?=$row["InstructorID"]?>Name" aria-describedby="editInstructor<?=$row["InstructorID"]?>Help" name="iFirstName" value="<?=$row['FirstName']?>">
-                          <label for="editInstructor<?=$row["InstructorID"]?>Name" class="form-label">Last Name</label>
-                          <input type="text" class="form-control" id="editInstructor<?=$row["InstructorID"]?>Name" aria-describedby="editInstructor<?=$row["InstructorID"]?>Help" name="iLastName" value="<?=$row['LastName']?>">
-                          <div id="editInstructor<?=$row["InstructorID"]?>Help" class="form-text">Enter the instructor's name.</div>
+                          <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">First Name</label>
+                          <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="iFirstName" value="<?=$row['FirstName']?>">
+                          <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">Last Name</label>
+                          <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="iLastName" value="<?=$row['LastName']?>">
+                          <div id="editcity<?=$row["city_ID"]?>Help" class="form-text">Enter the instructor's name.</div>
                         </div>
-                        <input type="hidden" name="iid" value="<?=$row['InstructorID']?>">
+                        <input type="hidden" name="iid" value="<?=$row['city_ID']?>">
                         <input type="hidden" name="saveType" value="Edit">
                         <button type="submit" class="btn btn-primary">Submit</button>
                       </form>
