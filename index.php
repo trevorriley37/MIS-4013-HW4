@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       break;
 
       case 'Delete':
-        $sqlDelete = "Delete From City where InstructorID=?";
+        $sqlDelete = "Delete From City where city_ID=?";
         $stmtDelete = $conn->prepare($sqlDelete);
         $stmtDelete->bind_param("i", $_POST['iid']);
         $stmtDelete->execute();
