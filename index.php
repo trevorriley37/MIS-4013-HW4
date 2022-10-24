@@ -146,7 +146,7 @@ if ($result->num_rows > 0) {
           </tr>
           
 <?php
-  }
+  
 } else {
   echo "0 results";
 }
