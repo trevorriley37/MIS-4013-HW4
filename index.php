@@ -59,11 +59,11 @@ if ($result->num_rows > 0) {
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="editInstructor<?=$row["InstructorID"]?>Name" class="form-label">First Name</label>
+                  <label for="editInstructor<?=$row["InstructorID"]?>Name" class="form-label">City Abbreviation</label>
                           <input type="text" class="form-control" id="editInstructor<?=$row["InstructorID"]?>Name" aria-describedby="editInstructor<?=$row["InstructorID"]?>Help" name="icityabrv">
-                          <label for="editInstructor<?=$row["InstructorID"]?>Name" class="form-label">Last Name</label>
+                          <label for="editInstructor<?=$row["InstructorID"]?>Name" class="form-label">City Full Name</label>
                           <input type="text" class="form-control" id="editInstructor<?=$row["InstructorID"]?>Name" aria-describedby="editInstructor<?=$row["InstructorID"]?>Help" name="icityname">
-                          <div id="editInstructor<?=$row["InstructorID"]?>Help" class="form-text">Enter the instructor's name.</div>
+                          <div id="editInstructor<?=$row["InstructorID"]?>Help" class="form-text">Enter the cities info.</div>
                         </div>
                 <input type="hidden" name="saveType" value="Add">
                 <button type="submit" class="btn btn-primary">Submit</button>
