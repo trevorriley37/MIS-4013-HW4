@@ -39,13 +39,13 @@ $result = $conn->query($sql);
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="editCourse<?=$row["CourseID"]?>Name" class="form-label">InstructorID</label>
+                  <label for="editCourse<?=$row["CourseID"]?>Name" class="form-label">city_ID</label>
                           <input type="text" class="form-control" id="editCourse<?=$row["CourseID"]?>Name" aria-describedby="editCourse<?=$row["CourseID"]?>Help" name="cInsID">
-                          <label for="editCourse<?=$row["CourseID"]?>Name" class="form-label">Course</label>
+                          <label for="editCourse<?=$row["CourseID"]?>Name" class="form-label">City Abbreviation</label>
                           <input type="text" class="form-control" id="editCourse<?=$row["CourseID"]?>Name" aria-describedby="editCourse<?=$row["CourseID"]?>Help" name="cCourse">
-                          <label for="editCourse<?=$row["CourseID"]?>Name" class="form-label">Section</label>
+                          <label for="editCourse<?=$row["CourseID"]?>Name" class="form-label">Full Name</label>
                           <input type="text" class="form-control" id="editCourse<?=$row["CourseID"]?>Name" aria-describedby="editCourse<?=$row["CourseID"]?>Help" name="cSection">
-                          <div id="editCourse<?=$row["CourseID"]?>Help" class="form-text">Enter the Course information.</div>
+                          <div id="editCourse<?=$row["CourseID"]?>Help" class="form-text">Enter the city information.</div>
                         </div>
                 <input type="hidden" name="saveType" value="Add">
                 <button type="submit" class="btn btn-primary">Submit</button>
