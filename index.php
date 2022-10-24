@@ -103,8 +103,7 @@ if ($result->num_rows > 0) {
 
 
 <?php
-
-   while($row = $result->fetch_assoc()) {
+ while($row = $result->fetch_assoc()) {
 ?>
           
           <tr>
@@ -149,8 +148,8 @@ if ($result->num_rows > 0) {
           </tr>
           
 <?php
-  
- else {
+  }
+} else {
   echo "0 results";
 }
 $conn->close();
