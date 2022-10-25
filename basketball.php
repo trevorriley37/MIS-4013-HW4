@@ -19,7 +19,7 @@ $result = $conn->query($sql);
 
 
 
-<?php
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   switch ($_POST['saveType']) {
