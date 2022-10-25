@@ -24,9 +24,9 @@ $result = $conn->query($sql);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   switch ($_POST['saveType']) {
     case 'Add':
-        $sqlAdd = "insert into Basketball (Team_Name) value (?, ?)";
+        $sqlAdd = "insert into Basketball (city_ID,Team_Name) value (?, ?)";
         $stmtAdd = $conn->prepare($sqlAdd);
-        $stmtAdd->bind_param("s", $_POST['iteamname']);
+        $stmtAdd->bind_param("is",$_POST['icityID'], $_POST['iteamname']);
         $stmtAdd->execute();   
       echo '<div class="alert alert-success" role="alert">New Team added.</div>';
       break;
@@ -75,6 +75,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">Team Name</label>
                           <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="iteamname">
                           <div id="editcity<?=$row["city_ID"]?>Help" class="form-text">Enter the basketball team name.</div>
+                           <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">City_ID</label>
+                          <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="icityID">
                         </div>
                 <input type="hidden" name="saveType" value="Add">
                 <button type="submit" class="btn btn-primary">Submit</button>
