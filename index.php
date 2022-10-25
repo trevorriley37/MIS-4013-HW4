@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="editcity<?=$row<?=$row["city_ID"]?>Name" class="form-label">City Abbreviation</label>
+                  <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">City Abbreviation</label>
                           <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="icityabrv">
                           <label for="editcity<?=$row<?=$row["city_ID"]?>Name" class="form-label">City Full Name</label>
                           <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="icityname">
