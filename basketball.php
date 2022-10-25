@@ -107,15 +107,15 @@ if ($result->num_rows > 0) {
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="editbasketball<?=$row["city_ID"]?>Label">Edit City</h1>
+                      <h1 class="modal-title fs-5" id="editbasketball<?=$row["city_ID"]?>Label">Edit team</h1>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <form method="post" action="">
                         <div class="mb-3">
-                          <label for="editbasketball<?=$row["city_ID"]?>Name" class="form-label">CityID</label>
+                          <label for="editbasketball<?=$row["city_ID"]?>Name" class="form-label"> Enter CityID</label>
                           <input type="text" class="form-control" id="editbasketball<?=$row["city_ID"]?>Name" aria-describedby="editbasketball<?=$row["city_ID"]?>Help" name="editcityID" value="<?=$row['city_ID']?>">
-                          <label for="editbasketball<?=$row["city_ID"]?>Name" class="form-label"> Team Name</label>
+                          <label for="editbasketball<?=$row["city_ID"]?>Name" class="form-label"> Enter Team Name</label>
                           <input type="text" class="form-control" id="editbasketball<?=$row["city_ID"]?>Name" aria-describedby="editbasketball<?=$row["city_ID"]?>Help" name="editteamname" value="<?=$row['Team_Name']?>">
                           <div id="editbasketball<?=$row["city_ID"]?>Help" class="form-text">Enter the Teams CityID and Name.</div>
                         </div>
