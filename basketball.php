@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     case 'Add':
         $sqlAdd = "insert into Basketball (Team_Name) value (?, ?)";
         $stmtAdd = $conn->prepare($sqlAdd);
-        $stmtAdd->bind_param("ss", $_POST['iteamname']);
+        $stmtAdd->bind_param("i", $_POST['iteamname']);
         $stmtAdd->execute();   
       echo '<div class="alert alert-success" role="alert">New Team added.</div>';
       break;
