@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      
       
       case 'Edit':
-      $sqlEdit = "update basketball set Team_Name=?, city_ID=? where city_ID=?";
+      $sqlEdit = "update Basketball set Team_Name=?, city_ID=? where city_ID=?";
       $stmtEdit = $conn->prepare($sqlEdit);
       $stmtEdit->bind_param("ssi", $_POST['editteamname'], $_POST['editcityID'], $_POST['iid']);
       $stmtEdit->execute();
