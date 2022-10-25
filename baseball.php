@@ -23,7 +23,7 @@ $result = $conn->query($sql);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   switch ($_POST['saveType']) {
     case 'Add':
-        $sqlAdd = "insert into Baseball (city_ID,Baseball_Name) value (?, ?)";
+        $sqlAdd = "insert into Baseball (city_ID,Baseball_name) value (?, ?)";
         $stmtAdd = $conn->prepare($sqlAdd);
         $stmtAdd->bind_param("is",$_POST['icityID'], $_POST['iteamname']);
         $stmtAdd->execute();   
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      
       
       case 'Edit':
-      $sqlEdit = "update Baseball set Baseball_Name=?, city_ID=? where city_ID=?";
+      $sqlEdit = "update Baseball set Baseball_name=?, city_ID=? where city_ID=?";
       $stmtEdit = $conn->prepare($sqlEdit);
       $stmtEdit->bind_param("ssi", $_POST['editteamname'], $_POST['editcityID'], $_POST['iid']);
       $stmtEdit->execute();
@@ -96,7 +96,7 @@ if ($result->num_rows > 0) {
           
           <tr>
             <td><?=$row["city_ID"]?></td>
-            <td><?=$row["Baseball_Name"]?></td>
+            <td><?=$row["Baseball_name"]?></td>
             
             <td>
               <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editbaseball<?=$row["city_ID"]?>" style = "background-color:white;">
