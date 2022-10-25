@@ -96,7 +96,7 @@ if ($result->num_rows > 0) {
           
           <tr>
             <td><?=$row["city_ID"]?></td>
-            <td><?=$row["Team_Name"]?></td>
+            <td><?=$row["football_name"]?></td>
             
             <td>
               <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editfootball<?=$row["city_ID"]?>" style = "background-color:white;">
