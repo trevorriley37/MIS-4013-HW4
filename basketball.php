@@ -72,11 +72,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">Team Name</label>
-                          <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="iteamname">
-                          <div id="editcity<?=$row["city_ID"]?>Help" class="form-text">Enter the basketball team name.</div>
-                           <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">City_ID</label>
-                          <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="icityID">
+                  <label for="editbasketball<?=$row["city_ID"]?>Name" class="form-label">Team Name</label>
+                          <input type="text" class="form-control" id="editbasketball<?=$row["city_ID"]?>Name" aria-describedby="editbasketball<?=$row["city_ID"]?>Help" name="iteamname">
+                          <div id="editbasketball<?=$row["city_ID"]?>Help" class="form-text">Enter the basketball team name.</div>
+                           <label for="editbasketball<?=$row["city_ID"]?>Name" class="form-label">City_ID</label>
+                          <input type="text" class="form-control" id="editbasketball<?=$row["city_ID"]?>Name" aria-describedby="editbasketball<?=$row["city_ID"]?>Help" name="icityID">
                         </div>
                 <input type="hidden" name="saveType" value="Add">
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -100,24 +100,24 @@ if ($result->num_rows > 0) {
             <td><?=$row["Team_Name"]?></td>
             
             <td>
-              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editcity<?=$row["city_ID"]?>" style = "background-color:white;">
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editbasketball<?=$row["city_ID"]?>" style = "background-color:white;">
                 Edit
               </button>
-              <div class="modal fade" id="editcity<?=$row["city_ID"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editcity<?=$row["city_ID"]?>Label" aria-hidden="true">
+              <div class="modal fade" id="editbasketball<?=$row["city_ID"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editbasketball<?=$row["city_ID"]?>Label" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="editcity<?=$row["city_ID"]?>Label">Edit City</h1>
+                      <h1 class="modal-title fs-5" id="editbasketball<?=$row["city_ID"]?>Label">Edit City</h1>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <form method="post" action="">
                         <div class="mb-3">
-                          <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">First Name</label>
-                          <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="iFirstName" value="<?=$row['Abbreviation']?>">
-                          <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">Last Name</label>
-                          <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="iLastName" value="<?=$row['fullname']?>">
-                          <div id="editcity<?=$row["city_ID"]?>Help" class="form-text">Enter the cities Full name/Abbreviation.</div>
+                          <label for="editbasketball<?=$row["city_ID"]?>Name" class="form-label">First Name</label>
+                          <input type="text" class="form-control" id="editbasketball<?=$row["city_ID"]?>Name" aria-describedby="editbasketball<?=$row["city_ID"]?>Help" name="iFirstName" value="<?=$row['Abbreviation']?>">
+                          <label for="editbasketball<?=$row["city_ID"]?>Name" class="form-label">Last Name</label>
+                          <input type="text" class="form-control" id="editbasketball<?=$row["city_ID"]?>Name" aria-describedby="editbasketball<?=$row["city_ID"]?>Help" name="iLastName" value="<?=$row['fullname']?>">
+                          <div id="editbasketball<?=$row["city_ID"]?>Help" class="form-text">Enter the cities Full name/Abbreviation.</div>
                         </div>
                         <input type="hidden" name="iid" value="<?=$row['city_ID']?>">
                         <input type="hidden" name="saveType" value="Edit">
