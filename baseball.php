@@ -115,7 +115,7 @@ if ($result->num_rows > 0) {
                           <label for="editbaseball<?=$row["city_ID"]?>Name" class="form-label">Enter CityID</label>
                              <input type="text" class="form-control" id="editbaseball<?=$row["city_ID"]?>Name" aria-describedby="editbaseball<?=$row["city_ID"]?>Help" name="editcityID" value="<?=$row['city_ID']?>">
                              <label for="editbaseball<?=$row["city_ID"]?>Name" class="form-label">Enter Team Name</label>
-                             <input type="text" class="form-control" id="editbaseball<?=$row["city_ID"]?>Name" aria-describedby="editbaseball<?=$row["city_ID"]?>Help" name="editteamname" value="<?=$row['Team_Name']?>">
+                             <input type="text" class="form-control" id="editbaseball<?=$row["city_ID"]?>Name" aria-describedby="editbaseball<?=$row["city_ID"]?>Help" name="editteamname" value="<?=$row['Baseball_name']?>">
                              <div id="editbaseball<?=$row["city_ID"]?>Help" class="form-text">Enter the Teams CityID and Name.</div>
                             </div>
                         <input type="hidden" name="iid" value="<?=$row['city_ID']?>">
