@@ -72,11 +72,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">City Abbreviation</label>
+                  <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">Team Name</label>
                           <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="iteamname">
-                          <label for="editcity<?=$row["city_ID"]?>Name" class="form-label">City Full Name</label>
-                          <input type="text" class="form-control" id="editcity<?=$row["city_ID"]?>Name" aria-describedby="editcity<?=$row["city_ID"]?>Help" name="icityname">
-                          <div id="editcity<?=$row["city_ID"]?>Help" class="form-text">Enter the cities info.</div>
+                          <div id="editcity<?=$row["city_ID"]?>Help" class="form-text">Enter the basketball team name.</div>
                         </div>
                 <input type="hidden" name="saveType" value="Add">
                 <button type="submit" class="btn btn-primary">Submit</button>
