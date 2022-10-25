@@ -41,11 +41,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      
       
       case 'Edit':
-      $sqlEdit = "update City set Abbreviation=?, fullname=? where city_ID=?";
+      $sqlEdit = "update basketball set Team_Name=?, city_ID=?";
       $stmtEdit = $conn->prepare($sqlEdit);
-      $stmtEdit->bind_param("ssi", $_POST['iFirstName'], $_POST['iLastName'], $_POST['iid']);
+      $stmtEdit->bind_param("si", $_POST['editteamname']}, $_POST['editcityID']);
       $stmtEdit->execute();
-      echo '<div class="alert alert-success" role="alert">City edited.</div>';
+      echo '<div class="alert alert-success" role="alert">Team edited.</div>';
       break;
 
 
@@ -113,11 +113,11 @@ if ($result->num_rows > 0) {
                     <div class="modal-body">
                       <form method="post" action="">
                         <div class="mb-3">
-                          <label for="editbasketball<?=$row["city_ID"]?>Name" class="form-label">First Name</label>
-                          <input type="text" class="form-control" id="editbasketball<?=$row["city_ID"]?>Name" aria-describedby="editbasketball<?=$row["city_ID"]?>Help" name="iFirstName" value="<?=$row['Abbreviation']?>">
-                          <label for="editbasketball<?=$row["city_ID"]?>Name" class="form-label">Last Name</label>
-                          <input type="text" class="form-control" id="editbasketball<?=$row["city_ID"]?>Name" aria-describedby="editbasketball<?=$row["city_ID"]?>Help" name="iLastName" value="<?=$row['fullname']?>">
-                          <div id="editbasketball<?=$row["city_ID"]?>Help" class="form-text">Enter the cities Full name/Abbreviation.</div>
+                          <label for="editbasketball<?=$row["city_ID"]?>Name" class="form-label">CityID</label>
+                          <input type="text" class="form-control" id="editbasketball<?=$row["city_ID"]?>Name" aria-describedby="editbasketball<?=$row["city_ID"]?>Help" name="editcityID" value="<?=$row['city_ID']?>">
+                          <label for="editbasketball<?=$row["city_ID"]?>Name" class="form-label">Team Name</label>
+                          <input type="text" class="form-control" id="editbasketball<?=$row["city_ID"]?>Name" aria-describedby="editbasketball<?=$row["city_ID"]?>Help" name="editteamname" value="<?=$row['Team_Name']?>">
+                          <div id="editbasketball<?=$row["city_ID"]?>Help" class="form-text">Enter the Teams CityID and Name.</div>
                         </div>
                         <input type="hidden" name="iid" value="<?=$row['city_ID']?>">
                         <input type="hidden" name="saveType" value="Edit">
