@@ -56,20 +56,6 @@ echo "Connected successfully";
   </div>
 </nav>
 
-<?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  switch ($_POST['saveType']) {
-    case 'Add':
-        $sqlAdd = "insert into City (Abbreviation, fullname) value (?, ?)";
-        $stmtAdd = $conn->prepare($sqlAdd);
-        $stmtAdd->bind_param("ss", $_POST['icityabrv'], $_POST['icityname']);
-        $stmtAdd->execute();   
-      echo '<div class="alert alert-success" role="alert">New City added.</div>';
-      break;
-
-   }
-}
-      
       
       ?>
