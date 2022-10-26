@@ -57,5 +57,4 @@ echo "Connected successfully";
 </nav>
 
 
-      
-      ?>
+
